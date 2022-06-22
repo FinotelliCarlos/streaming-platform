@@ -1,3 +1,9 @@
+import { Event } from './pages/Event'
+
 export const App = () => {
-  return <div>Hello</div>
+  return (
+    <div>
+      <Event />
+    </div>
+  )
 }
