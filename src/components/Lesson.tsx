@@ -12,10 +12,14 @@ interface LessonProps {
 
 export function Lesson(props: LessonProps) {
   const isLessonAvailable = isPast(props.availableAt)
-  const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", { locale: ptBR })
+  const availableDateFormatted = format(
+    props.availableAt,
+    "EEEE' • 'd' de 'MMMM' • 'k'h'mm",
+    { locale: ptBR }
+  )
 
   return (
-    <Link to={`/event/lesson/${props.slug}`} className='group'>
+    <Link to={`/event/lesson/${props.slug}`} className="group">
       <span className="text-gray-300 ">{availableDateFormatted}</span>
 
       <div className="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500">
