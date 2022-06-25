@@ -5,6 +5,7 @@ import { useCreateSubscriberMutation } from '../graphql/generated'
 
 export function Subscribe() {
   const navigate = useNavigate()
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
 
@@ -12,6 +13,7 @@ export function Subscribe() {
 
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault()
+
     await createSubscriber({
       variables: {
         name,
@@ -33,7 +35,6 @@ export function Subscribe() {
             <strong className="text-blue-500">aplicação completa</strong>, do
             zero, com <strong className="text-blue-500">React</strong>
           </h1>
-
           <p className="mt-4 text-gray-200 leading-relaxed">
             Em apenas uma semana você vai dominar na prática uma das tecnologias
             mais utilizadas e com alta demanda para acessar as melhores
@@ -56,11 +57,10 @@ export function Subscribe() {
               placeholder="Seu nome completo"
               onChange={event => setName(event.target.value)}
             />
-
             <input
               className="bg-gray-900 rounded px-5 h-14"
               type="email"
-              placeholder="Seu melhor e-mail"
+              placeholder="Digite seu e-mail"
               onChange={event => setEmail(event.target.value)}
             />
 
@@ -75,7 +75,7 @@ export function Subscribe() {
         </div>
       </div>
 
-      <img src="/src/assets/code-mockup.png" className="mt-10" />
+      <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { client } from './lib/apollo'
 import { Router } from './Router'
 
-export const App = () => {
+function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
@@ -12,3 +12,5 @@ export const App = () => {
     </ApolloProvider>
   )
 }
+
+export default App

@@ -1,5 +1,7 @@
 schema: https://api-sa-east-1.graphcms.com/v2/cl4ojudvm0bp501z46v9f04kn/master
+
 documents: './src/graphql/**/*.graphql'
+
 generates:
   ./src/graphql/generated.ts:
     plugins:
