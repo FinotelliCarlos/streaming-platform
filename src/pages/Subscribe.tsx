@@ -1,7 +1,5 @@
-import { FormEvent } from 'react'
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import { Logo } from '../components/Logo'
 import { useCreateSubscriberMutation } from '../graphql/generated'
 
@@ -14,7 +12,6 @@ export function Subscribe() {
 
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault()
-
     await createSubscriber({
       variables: {
         name,
