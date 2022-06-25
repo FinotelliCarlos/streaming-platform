@@ -11,4 +11,3 @@ generates:
       withHooks: true
       withHOC: false
       withComponent: false
-      fetcher: fetch
