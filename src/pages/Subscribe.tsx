@@ -1,5 +1,5 @@
-import FormEvent from 'react'
-import useState from 'react'
+import {FormEvent} from 'react'
+import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { Logo } from '../components/Logo'
