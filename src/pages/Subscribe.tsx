@@ -6,14 +6,6 @@ import { gql, useMutation } from '@apollo/client'
 
 import { Logo } from '../components/Logo'
 
-const CREATE_SUBSCIBE_MUTATION = gql`
-  mutation CreateSubscriber($name: String!, $email: String!) {
-    createSubscriber(data: { name: $name, email: $email }) {
-      id
-    }
-  }
-`
-
 export function Subscribe() {
   const navigate = useNavigate()
   const [name, setName] = useState('')
